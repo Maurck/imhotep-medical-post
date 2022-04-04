@@ -1,0 +1,29 @@
+{
+  "name": "imhotep-medical-post",
+  "version": "1.0.0",
+  "description": "medical post web application",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maurck/imhotep-medical-post.git"
+  },
+  "author": "Mauricio Linares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maurck/imhotep-medical-post/issues"
+  },
+  "homepage": "https://github.com/Maurck/imhotep-medical-post#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15"
+  }
+}
