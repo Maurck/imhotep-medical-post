@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "medical post web application",
   "main": "app.js",
+  "engines": { "node": "16.14.0" },
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev --respawn src/app.ts",
-    "start": "node ./build/app.js"
+    "start": "node ./build/app.js",
+    "postinstall": "tsc",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "repository": {
     "type": "git",
