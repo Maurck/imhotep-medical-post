@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 import Medic from "../../../models/Medic"
-import Utils from "../../../../utils/Utils"
-import Responses from "../../../../utils/Responses"
+import Utils from "../../../../shared/utils/Utils"
+import Responses from "../../../../shared/utils/Responses"
 
 class CreateMedicFlow {
 

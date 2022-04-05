@@ -1,6 +1,6 @@
 import { body } from "express-validator";
 import { uniqueAdminDNI } from "../../../middlewares/databaseValidators"
-import { fieldValidation } from "../../../../middlewares/fieldValidation";
+import { fieldValidation } from "../../../../shared/middlewares/fieldValidation";
 
 class CreateAdminValidation {
 

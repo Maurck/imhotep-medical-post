@@ -1,5 +1,5 @@
 import { body } from "express-validator";
-import { fieldValidation } from "../../../../middlewares/fieldValidation";
+import { fieldValidation } from "../../../../shared/middlewares/fieldValidation";
 
 class LoginAdminValidation {
 

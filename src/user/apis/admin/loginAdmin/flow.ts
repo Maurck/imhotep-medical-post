@@ -1,8 +1,8 @@
 import { Request, Response } from "express"
 import bcryptjs from "bcryptjs";
 import Admin from "../../../models/Admin"
-import Utils from "../../../../utils/Utils"
-import Responses from "../../../../utils/Responses"
+import Utils from "../../../../shared/utils/Utils"
+import Responses from "../../../../shared/utils/Responses"
 
 class LoginAdminFlow {
 
