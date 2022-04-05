@@ -6,11 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Server = void 0;
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-// import routes
 const db_1 = require("../config/db");
+// import routes
 const IndexRoutes_1 = __importDefault(require("../routes/IndexRoutes"));
-// import PostRouter from './routes/PostRoutes';
-// import UserRoutes from './routes/UserRoutes';
 // Server Class
 class Server {
     constructor() {
@@ -21,7 +19,7 @@ class Server {
     }
     config() {
         // Settings
-        this.app.set('port', process.env.PORT || 4000);
+        this.app.set("port", process.env.PORT || 4000);
         this.db.dbConnection();
         // middlewares
         this.app.use(express_1.default.json());
@@ -29,12 +27,11 @@ class Server {
         this.app.use((0, cors_1.default)());
     }
     routes() {
-        // const router: express.Router = express.Router();
-        this.app.use('/', IndexRoutes_1.default);
+        this.app.use("/", IndexRoutes_1.default);
     }
     start() {
-        this.app.listen(this.app.get('port'), () => {
-            console.log('Servidor escuchando en el puerto:', this.app.get('port'));
+        this.app.listen(this.app.get("port"), () => {
+            console.log("Servidor escuchando en el puerto:", this.app.get("port"));
         });
     }
 }
