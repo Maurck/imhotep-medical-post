@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import Medic from "../../../../models/db/Medic"
+import Medic from "../../../models/Medic"
 import Utils from "../../../../utils/Utils"
 import Responses from "../../../../utils/Responses"
 

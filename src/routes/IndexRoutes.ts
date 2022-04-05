@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import userRouter from "./UserRoutes"
+import userRouter from "../user/routes/UserRoutes"
 
 class IndexRoutes {
     router: Router;

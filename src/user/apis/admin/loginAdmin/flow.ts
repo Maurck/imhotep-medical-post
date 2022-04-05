@@ -1,37 +1,37 @@
 import { Request, Response } from "express"
 import bcryptjs from "bcryptjs";
-import Medic from "../../../../models/db/Medic"
+import Admin from "../../../models/Admin"
 import Utils from "../../../../utils/Utils"
 import Responses from "../../../../utils/Responses"
 
-class LoginMedicFlow {
+class LoginAdminFlow {
 
     async flow(req : Request, res : Response){
-        const { medic_cpm, medic_password } = req.body;
+        const { admin_dni, admin_password } = req.body;
 
         try {
-          const medic = await Medic.findOne({
-            medic_cpm,
+          const admin = await Admin.findOne({
+            admin_dni,
           }).exec();
       
-          if (!medic) {
-            return Responses.customErrorResponse(res, "Medico no encontrado", 400);
+          if (!admin) {
+            return Responses.customErrorResponse(res, "Administrador no encontrado", 400);
           }
       
           const validPassword = bcryptjs.compareSync(
-            medic_password,
-            medic.medic_password
+            admin_password,
+            admin.admin_password
           );
       
           if (!validPassword) {
             return Responses.customErrorResponse(res, "Contraseña incorrecta", 400);
           }
       
-          const token = await Utils.generateJWT(medic._id, medic.user_type);
+          const token = await Utils.generateJWT(admin._id, admin.user_type);
           return res.json({
             ok: true,
             token,
-            user_id: medic._id,
+            user_id: admin._id,
           });
         } catch (error) {
           console.log(error);
@@ -46,6 +46,6 @@ class LoginMedicFlow {
 
 }
 
-const createMedic = new LoginMedicFlow();
+const createAdmin = new LoginAdminFlow();
 
-export default createMedic.flow;
+export default createAdmin.flow;

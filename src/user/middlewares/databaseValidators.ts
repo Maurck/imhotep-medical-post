@@ -1,5 +1,5 @@
-import Admin from '../models/db/Admin';
-import Medic from '../models/db/Medic';
+import Admin from '../models/Admin';
+import Medic from '../models/Medic';
 
 export const uniqueAdminDNI = async (adminDNI: string) : Promise<void> => {
     const adminDNIExists = await Admin.findOne({

@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import Admin from "../../../../models/db/Admin"
+import Admin from "../../../models/Admin"
 import Utils from "../../../../utils/Utils"
 import Responses from "../../../../utils/Responses"
 

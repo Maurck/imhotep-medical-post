@@ -1,6 +1,6 @@
 import { body } from "express-validator";
-import { uniqueMedicDNI } from "../../../../middlewares/databaseValidators"
-import { uniqueMedicCPM } from "../../../../middlewares/databaseValidators"
+import { uniqueMedicDNI } from "../../../middlewares/databaseValidators"
+import { uniqueMedicCPM } from "../../../middlewares/databaseValidators"
 import { fieldValidation } from "../../../../middlewares/fieldValidation";
 
 class CreateMedicValidation {

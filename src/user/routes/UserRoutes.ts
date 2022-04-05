@@ -1,16 +1,16 @@
 import { Router } from 'express';
 
-import CreateAdminFlow from "../apis/user/admin/createAdmin/flow"
-import CreateAdminValidator from "../apis/user/admin/createAdmin/validation"
+import CreateAdminFlow from "../apis/admin/createAdmin/flow"
+import CreateAdminValidator from "../apis/admin/createAdmin/validation"
 
-import LoginAdminFlow from "../apis/user/admin/loginAdmin/flow"
-import LoginAdminValidator from "../apis/user/admin/loginAdmin/validation"
+import LoginAdminFlow from "../apis/admin/loginAdmin/flow"
+import LoginAdminValidator from "../apis/admin/loginAdmin/validation"
 
-import CreateMedicFlow from "../apis/user/medic/createMedic/flow"
-import CreateMedicValidator from "../apis/user/medic/createMedic/validation"
+import CreateMedicFlow from "../apis/medic/createMedic/flow"
+import CreateMedicValidator from "../apis/medic/createMedic/validation"
 
-import LoginMedicFlow from "../apis/user/medic/loginMedic/flow"
-import LoginMedicValidator from "../apis/user/medic/loginMedic/validation"
+import LoginMedicFlow from "../apis/medic/loginMedic/flow"
+import LoginMedicValidator from "../apis/medic/loginMedic/validation"
 
 
 class UserRoutes {
