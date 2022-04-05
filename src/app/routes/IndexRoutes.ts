@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Request, Response, Router } from 'express';
 import userRouter from "../../user/routes/UserRoutes"
 
 class IndexRoutes {
@@ -10,7 +10,7 @@ class IndexRoutes {
     }
 
     routes(): void {
-        this.router.get('/', (req, res)=> {
+        this.router.get('/', (req: Request, res: Response)=> {
             res.send('Hola Mundo!');
         })
 
